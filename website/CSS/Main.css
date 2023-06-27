@@ -1,0 +1,184 @@
+    /* Padding for a section */
+    .section {
+        padding: 100px, 100x;
+    }
+    
+        /* Styles for the home section */
+    .home {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: #111111; 
+    }
+    
+        /* Semi-transparent overlay for the home section */
+    .home:before {
+        z-index: 777;
+        content: '';
+        position: absolute;
+        background: rgba(43, 38, 38, 0.5);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    
+        /* Styling for the content within the home section */
+    .home .content {
+        z-index: 888;
+        color: rgb(255, 255, 255);
+        height: 50%;
+        margin-top: 5px;
+        margin-left: 50px;
+        display: none;
+    }
+
+    .home .content.active {
+        display: block;
+    }
+    
+        /* Styles for the heading within the content */
+    .home .content h1 {
+        font-size: 4em;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        line-height: 75px;
+        margin-bottom: 5px;
+        margin-top: 30px;
+    }
+    
+    
+        /* Styles for a span within the heading */
+    .home .content h1 span {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+        /* Styles for paragraphs within the content */
+    .home .content p {
+        margin-bottom: 100px;
+    }
+    
+        /* Styles for links within the content */
+    .home .content a {
+        background: #ffffff;
+        padding: 15px 35px;
+        color: rgb(0, 0, 0);
+        font-size: 1.1em;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 2px;
+    }
+    
+    
+        /* Styles for media icon links except the last one */
+    .home .media-icons a:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    
+        /* Hover effect for media icon links */
+    .home .media-icons a:hover {
+        transform: scale(1.3);
+    }
+    
+        /* Styles for video within the home section */
+    .home video {
+        z-index: 000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+        /* Styles for the slider navigation */
+    .slider-navigation {
+        z-index: 888;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(80px);
+        margin-bottom: 12px;
+    }
+    
+        /* Styles for navigation buttons within the slider navigation */
+    .slider-navigation .nav-btn {
+        width: 12px;
+        height: 12px;
+        background: #ffffff;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        transition: 0.3 ease;
+    }
+    
+        /* Styles for the active navigation button */
+    .slider-navigation .nav-btn.active {
+        background: #ec6e1afa;
+    }
+        /* Styles for navigation buttons except the last one */
+    .slider-navigation .nav-btn:not(:last-child) {
+        margin-right: 20px;
+    }
+    
+        /* Hover effect for navigation buttons */
+    .slider-navigation .nav-btn:hover{
+        transform: scale(1.2);
+    }
+    
+    .slider-navigation {
+        display: flex;
+    }
+    
+    .nav-btn {
+        width: 50px;
+        height: 50px;
+        background-color: gray;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    
+        /* Styles for the video container */
+    .video-container {
+        margin-top: 20px;
+    }
+    
+    .video-slide {
+        position: absolute;
+        width: 100%;
+        clip-path: circle(0% at 0 50%);
+    }
+
+    .video-slide.active {
+        clip-path: circle(150% at 0 50%);
+        transition: 2s ease;
+        transition-property: clip-path;
+    }
+    
+    @media (max-width: 500px) {
+        header {
+            padding: 12px 20px;
+        }
+        
+        section {
+            padding: 100px 20px;
+        }
+        .home .media-icons {
+            right: 15px;
+        }
+    
+        header.navigation {
+            display: none;
+        }
+        /* Media queries for smaller screens */
+    }
+    
+    span #user-account {
+        color: rgb(255, 255, 255);
+        font-size: 1.5rem;
+    }
